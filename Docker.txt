@@ -1,0 +1,1 @@
+docker run --gpus all -it --rm -v D:\Programing\vaesystem:/home vae_image:1.0 /bin/bash
