@@ -1,3 +1,0 @@
-/content/VAE_movie/c++/build/CMakeFiles/myapp.dir
-/content/VAE_movie/c++/build/CMakeFiles/edit_cache.dir
-/content/VAE_movie/c++/build/CMakeFiles/rebuild_cache.dir
