@@ -1,0 +1,255 @@
+/content/VAE_movie/c++/src/main.cpp: In function 'int heatmap(std::string, std::string, std::string)':
+/content/VAE_movie/c++/src/main.cpp:352:165: error: no match for 'operator+' (operand types are 'cv::Size' {aka 'cv::Size_<int>'} and 'bool')
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                           |                                                                                                                                           |
+      |                                                           cv::Size {aka cv::Size_<int>}                                                                                                               bool
+In file included from /usr/include/opencv4/opencv2/core.hpp:57,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/matx.hpp:1201:17: note: candidate: 'template<class _Tp, int m, int n> cv::Matx<_Tp, m, n> cv::operator+(const cv::Matx<_Tp, m, n>&, const cv::Matx<_Tp, m, n>&)'
+ 1201 | Matx<_Tp, m, n> operator + (const Matx<_Tp, m, n>& a, const Matx<_Tp, m, n>& b)
+      |                 ^~~~~~~~
+/usr/include/opencv4/opencv2/core/matx.hpp:1201:17: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::Matx<_Tp, m, n>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:57,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/matx.hpp:1329:14: note: candidate: 'template<class _Tp, int cn> cv::Vec<_Tp, m> cv::operator+(const cv::Vec<_Tp, m>&, const cv::Vec<_Tp, m>&)'
+ 1329 | Vec<_Tp, cn> operator + (const Vec<_Tp, cn>& a, const Vec<_Tp, cn>& b)
+      |              ^~~~~~~~
+/usr/include/opencv4/opencv2/core/matx.hpp:1329:14: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::Vec<_Tp, m>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:58,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/types.hpp:1025:14: note: candidate: 'template<class _Tp> cv::Complex<_Tp> cv::operator+(const cv::Complex<_Tp>&, const cv::Complex<_Tp>&)'
+ 1025 | Complex<_Tp> operator + (const Complex<_Tp>& a, const Complex<_Tp>& b)
+      |              ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:1025:14: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::Complex<_Tp>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:58,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/types.hpp:1075:14: note: candidate: 'template<class _Tp> cv::Complex<_Tp> cv::operator+(const cv::Complex<_Tp>&, _Tp)'
+ 1075 | Complex<_Tp> operator + (const Complex<_Tp>& a, _Tp b)
+      |              ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:1075:14: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::Complex<_Tp>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:58,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/types.hpp:1085:14: note: candidate: 'template<class _Tp> cv::Complex<_Tp> cv::operator+(_Tp, const cv::Complex<_Tp>&)'
+ 1085 | Complex<_Tp> operator + (_Tp b, const Complex<_Tp>& a)
+      |              ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:1085:14: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   mismatched types 'const cv::Complex<_Tp>' and 'bool'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:58,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/types.hpp:1317:13: note: candidate: 'template<class _Tp> cv::Point_<_Tp> cv::operator+(const cv::Point_<_Tp>&, const cv::Point_<_Tp>&)'
+ 1317 | Point_<_Tp> operator + (const Point_<_Tp>& a, const Point_<_Tp>& b)
+      |             ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:1317:13: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::Point_<_Tp>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:58,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/types.hpp:1586:14: note: candidate: 'template<class _Tp> cv::Point3_<_Tp> cv::operator+(const cv::Point3_<_Tp>&, const cv::Point3_<_Tp>&)'
+ 1586 | Point3_<_Tp> operator + (const Point3_<_Tp>& a, const Point3_<_Tp>& b)
+      |              ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:1586:14: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::Point3_<_Tp>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:58,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/types.hpp:1783:12: note: candidate: 'template<class _Tp> cv::Size_<_Tp> cv::operator+(const cv::Size_<_Tp>&, const cv::Size_<_Tp>&)'
+ 1783 | Size_<_Tp> operator + (const Size_<_Tp>& a, const Size_<_Tp>& b)
+      |            ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:1783:12: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   mismatched types 'const cv::Size_<_Tp>' and 'bool'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:58,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/types.hpp:1996:12: note: candidate: 'template<class _Tp> cv::Rect_<_Tp> cv::operator+(const cv::Rect_<_Tp>&, const cv::Point_<_Tp>&)'
+ 1996 | Rect_<_Tp> operator + (const Rect_<_Tp>& a, const Point_<_Tp>& b)
+      |            ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:1996:12: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::Rect_<_Tp>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:58,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/types.hpp:2008:12: note: candidate: 'template<class _Tp> cv::Rect_<_Tp> cv::operator+(const cv::Rect_<_Tp>&, const cv::Size_<_Tp>&)'
+ 2008 | Rect_<_Tp> operator + (const Rect_<_Tp>& a, const Size_<_Tp>& b)
+      |            ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:2008:12: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::Rect_<_Tp>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:58,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/types.hpp:2130:7: note: candidate: 'cv::Range cv::operator+(const cv::Range&, int)'
+ 2130 | Range operator + (const Range& r1, int delta)
+      |       ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:2130:32: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'const cv::Range&'
+ 2130 | Range operator + (const Range& r1, int delta)
+      |                   ~~~~~~~~~~~~~^~
+/usr/include/opencv4/opencv2/core/types.hpp:2136:7: note: candidate: 'cv::Range cv::operator+(int, const cv::Range&)'
+ 2136 | Range operator + (int delta, const Range& r1)
+      |       ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:2136:23: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'int'
+ 2136 | Range operator + (int delta, const Range& r1)
+      |                   ~~~~^~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:2300:14: note: candidate: 'template<class _Tp> cv::Scalar_<_Tp> cv::operator+(const cv::Scalar_<_Tp>&, const cv::Scalar_<_Tp>&)'
+ 2300 | Scalar_<_Tp> operator + (const Scalar_<_Tp>& a, const Scalar_<_Tp>& b)
+      |              ^~~~~~~~
+/usr/include/opencv4/opencv2/core/types.hpp:2300:14: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::Scalar_<_Tp>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:59,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/mat.hpp:3557:20: note: candidate: 'cv::MatExpr cv::operator+(const cv::Mat&, const cv::Mat&)'
+ 3557 | CV_EXPORTS MatExpr operator + (const Mat& a, const Mat& b);
+      |                    ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.hpp:3557:43: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'const cv::Mat&'
+ 3557 | CV_EXPORTS MatExpr operator + (const Mat& a, const Mat& b);
+      |                                ~~~~~~~~~~~^
+/usr/include/opencv4/opencv2/core/mat.hpp:3558:20: note: candidate: 'cv::MatExpr cv::operator+(const cv::Mat&, const Scalar&)'
+ 3558 | CV_EXPORTS MatExpr operator + (const Mat& a, const Scalar& s);
+      |                    ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.hpp:3558:43: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'const cv::Mat&'
+ 3558 | CV_EXPORTS MatExpr operator + (const Mat& a, const Scalar& s);
+      |                                ~~~~~~~~~~~^
+/usr/include/opencv4/opencv2/core/mat.hpp:3559:20: note: candidate: 'cv::MatExpr cv::operator+(const Scalar&, const cv::Mat&)'
+ 3559 | CV_EXPORTS MatExpr operator + (const Scalar& s, const Mat& a);
+      |                    ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.hpp:3559:46: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'const Scalar&' {aka 'const cv::Scalar_<double>&'}
+ 3559 | CV_EXPORTS MatExpr operator + (const Scalar& s, const Mat& a);
+      |                                ~~~~~~~~~~~~~~^
+/usr/include/opencv4/opencv2/core/mat.hpp:3560:20: note: candidate: 'cv::MatExpr cv::operator+(const cv::MatExpr&, const cv::Mat&)'
+ 3560 | CV_EXPORTS MatExpr operator + (const MatExpr& e, const Mat& m);
+      |                    ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.hpp:3560:47: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'const cv::MatExpr&'
+ 3560 | CV_EXPORTS MatExpr operator + (const MatExpr& e, const Mat& m);
+      |                                ~~~~~~~~~~~~~~~^
+/usr/include/opencv4/opencv2/core/mat.hpp:3561:20: note: candidate: 'cv::MatExpr cv::operator+(const cv::Mat&, const cv::MatExpr&)'
+ 3561 | CV_EXPORTS MatExpr operator + (const Mat& m, const MatExpr& e);
+      |                    ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.hpp:3561:43: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'const cv::Mat&'
+ 3561 | CV_EXPORTS MatExpr operator + (const Mat& m, const MatExpr& e);
+      |                                ~~~~~~~~~~~^
+/usr/include/opencv4/opencv2/core/mat.hpp:3562:20: note: candidate: 'cv::MatExpr cv::operator+(const cv::MatExpr&, const Scalar&)'
+ 3562 | CV_EXPORTS MatExpr operator + (const MatExpr& e, const Scalar& s);
+      |                    ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.hpp:3562:47: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'const cv::MatExpr&'
+ 3562 | CV_EXPORTS MatExpr operator + (const MatExpr& e, const Scalar& s);
+      |                                ~~~~~~~~~~~~~~~^
+/usr/include/opencv4/opencv2/core/mat.hpp:3563:20: note: candidate: 'cv::MatExpr cv::operator+(const Scalar&, const cv::MatExpr&)'
+ 3563 | CV_EXPORTS MatExpr operator + (const Scalar& s, const MatExpr& e);
+      |                    ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.hpp:3563:46: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'const Scalar&' {aka 'const cv::Scalar_<double>&'}
+ 3563 | CV_EXPORTS MatExpr operator + (const Scalar& s, const MatExpr& e);
+      |                                ~~~~~~~~~~~~~~^
+/usr/include/opencv4/opencv2/core/mat.hpp:3564:20: note: candidate: 'cv::MatExpr cv::operator+(const cv::MatExpr&, const cv::MatExpr&)'
+ 3564 | CV_EXPORTS MatExpr operator + (const MatExpr& e1, const MatExpr& e2);
+      |                    ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.hpp:3564:47: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'const cv::MatExpr&'
+ 3564 | CV_EXPORTS MatExpr operator + (const MatExpr& e1, const MatExpr& e2);
+      |                                ~~~~~~~~~~~~~~~^~
+/usr/include/opencv4/opencv2/core/mat.hpp:3566:9: note: candidate: 'template<class _Tp, int m, int n> cv::MatExpr cv::operator+(const cv::Mat&, const cv::Matx<_Tp, m, n>&)'
+ 3566 | MatExpr operator + (const Mat& a, const Matx<_Tp, m, n>& b) { return a + Mat(b); }
+      |         ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.hpp:3566:9: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   mismatched types 'const cv::Matx<_Tp, m, n>' and 'bool'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core.hpp:59,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/mat.hpp:3568:9: note: candidate: 'template<class _Tp, int m, int n> cv::MatExpr cv::operator+(const cv::Matx<_Tp, m, n>&, const cv::Mat&)'
+ 3568 | MatExpr operator + (const Matx<_Tp, m, n>& a, const Mat& b) { return Mat(a) + b; }
+      |         ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.hpp:3568:9: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::Matx<_Tp, m, n>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core/mat.hpp:3724,
+                 from /usr/include/opencv4/opencv2/core.hpp:59,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:2787:18: note: candidate: 'cv::MatConstIterator cv::operator+(const cv::MatConstIterator&, ptrdiff_t)'
+ 2787 | MatConstIterator operator + (const MatConstIterator& a, ptrdiff_t ofs)
+      |                  ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:2787:54: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'const cv::MatConstIterator&'
+ 2787 | MatConstIterator operator + (const MatConstIterator& a, ptrdiff_t ofs)
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~^
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:2794:18: note: candidate: 'cv::MatConstIterator cv::operator+(ptrdiff_t, const cv::MatConstIterator&)'
+ 2794 | MatConstIterator operator + (ptrdiff_t ofs, const MatConstIterator& a)
+      |                  ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:2794:40: note:   no known conversion for argument 1 from 'cv::Size' {aka 'cv::Size_<int>'} to 'ptrdiff_t' {aka 'long int'}
+ 2794 | MatConstIterator operator + (ptrdiff_t ofs, const MatConstIterator& a)
+      |                              ~~~~~~~~~~^~~
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:2935:24: note: candidate: 'template<class _Tp> cv::MatConstIterator_<_Tp> cv::operator+(const cv::MatConstIterator_<_Tp>&, ptrdiff_t)'
+ 2935 | MatConstIterator_<_Tp> operator + (const MatConstIterator_<_Tp>& a, ptrdiff_t ofs)
+      |                        ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:2935:24: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::MatConstIterator_<_Tp>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core/mat.hpp:3724,
+                 from /usr/include/opencv4/opencv2/core.hpp:59,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:2942:24: note: candidate: 'template<class _Tp> cv::MatConstIterator_<_Tp> cv::operator+(ptrdiff_t, const cv::MatConstIterator_<_Tp>&)'
+ 2942 | MatConstIterator_<_Tp> operator + (ptrdiff_t ofs, const MatConstIterator_<_Tp>& a)
+      |                        ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:2942:24: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   mismatched types 'const cv::MatConstIterator_<_Tp>' and 'bool'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core/mat.hpp:3724,
+                 from /usr/include/opencv4/opencv2/core.hpp:59,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:3072:19: note: candidate: 'template<class _Tp> cv::MatIterator_<_Tp> cv::operator+(const cv::MatIterator_<_Tp>&, ptrdiff_t)'
+ 3072 | MatIterator_<_Tp> operator + (const MatIterator_<_Tp>& a, ptrdiff_t ofs)
+      |                   ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:3072:19: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   'cv::Size' {aka 'cv::Size_<int>'} is not derived from 'const cv::MatIterator_<_Tp>'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+In file included from /usr/include/opencv4/opencv2/core/mat.hpp:3724,
+                 from /usr/include/opencv4/opencv2/core.hpp:59,
+                 from /usr/include/opencv4/opencv2/opencv.hpp:52,
+                 from /content/VAE_movie/c++/src/main.cpp:8:
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:3079:19: note: candidate: 'template<class _Tp> cv::MatIterator_<_Tp> cv::operator+(ptrdiff_t, const cv::MatIterator_<_Tp>&)'
+ 3079 | MatIterator_<_Tp> operator + (ptrdiff_t ofs, const MatIterator_<_Tp>& a)
+      |                   ^~~~~~~~
+/usr/include/opencv4/opencv2/core/mat.inl.hpp:3079:19: note:   template argument deduction/substitution failed:
+/content/VAE_movie/c++/src/main.cpp:352:202: note:   mismatched types 'const cv::MatIterator_<_Tp>' and 'bool'
+  352 |  cv::VideoWriter writer(outputmovie.c_str(), ex, fps, cv::Size((videoWidth-modelWidth)/stride+((videoWidth-modelWidth)%stride!=0), (videoHeight-modelHeight)/stride)+((videoHeight-modelHeight)%stride!=0), true);
+      |                                                                                                                                                                                                          ^
+make[2]: *** [CMakeFiles/myapp.dir/build.make:76: CMakeFiles/myapp.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/myapp.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2
